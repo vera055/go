@@ -23,9 +23,11 @@ export default {
 
 <style lang="stylus" scoped>
   .header
+    // 在webpack.base.conf.js中设置了别名
+    @import "~styles/varibles.styl"
     display: flex
     line-height: .86rem
-    background-color #00bcd4
+    background-color: $bgColor
     color: #fff
     .header-left
       width: .64rem
