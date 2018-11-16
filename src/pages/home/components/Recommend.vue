@@ -4,7 +4,7 @@
     <ul>
       <li
           class="item border-bottom"
-          v-for="item of recommendList"
+          v-for="item of list"
           :key="item.id">
         <img class="item-img" :src="item.imgUrl">
         <div class="item-info">
@@ -21,25 +21,8 @@
 <script>
 export default{
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1810/22/226c137568f18ac0a3.water.jpg_200x200_81ac3ecf.jpg',
-        title: '深圳欢乐谷',
-        desc: '狂欢无罪，够胆你就来'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1810/22/226c137568f18ac0a3.water.jpg_200x200_81ac3ecf.jpg',
-        title: '深圳欢乐谷',
-        desc: '狂欢无罪，够胆你就来'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1810/22/226c137568f18ac0a3.water.jpg_200x200_81ac3ecf.jpg',
-        title: '深圳欢乐谷',
-        desc: '狂欢无罪，够胆你就来'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 
