@@ -49,6 +49,10 @@ export default{
   },
   activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  // 在页面结束时触发该方法
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
